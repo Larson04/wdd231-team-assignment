@@ -1,0 +1,69 @@
+/* home page */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20%;
+    height: 200px;
+}
+nav {
+    display: block;
+}
+nav a {
+    margin: 10px;
+}
+.aotd {
+    display: flex;
+    justify-content: space-around;
+}
+.aotd img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.aotd-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.purpose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+}
+.purpose h3 {
+    font-size: 40px;
+}
+.purpose p {
+    text-align: center;
+    font-size: 30px;
+}
+.gallery {
+    display: flex;
+    justify-content: space-around;
+}
+.gallery-card img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+/* Dog and cat breeds pages */
+.breed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+.breed img {
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+}
+.breed-info {
+    text-align: center;
+}
+
+/* quiz page */
