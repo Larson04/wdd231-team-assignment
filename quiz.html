@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fur Facts</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz</h1>
+        <nav>
+            <a href="dog.html">Dog Breeds</a>
+            <a href="cat.html">Cat Breeds</a>
+            <a href="quiz.html">Quiz</a>
+        </nav>
+    </header>
+    <main>
+        <form>
+            <div class="trivia-questions">
+                <h1 class="movie-title-trivia">Question 1</h1>
+                <p class="trivia-question"></p>
+                <section class="answers">
+                <div class="trivia-option">            
+                    <input type="radio" value="answer1" name="question${index}">
+                    <label for="answer1" class="trivia-answer">${trivia.answer1}</label>
+                </div>
+                <div class="trivia-option">
+                    <input type="radio" value="answer2" name="question${index}">
+                    <label for="answer2" class="trivia-answer">${trivia.answer2}</label>
+                </div>
+                <div class="trivia-option">
+                    <input type="radio" value="answer3" name="question${index}">
+                    <label for="answer3" class="trivia-answer">${trivia.answer3}</label>
+                </div>
+                <div class="trivia-option">
+                    <input type="radio" value="answer4" name="question${index}">
+                    <label for="answer4" class="trivia-answer">${trivia.answer4}</label>
+                </div>      
+                <div class="trivia-option">            
+                    <input type="radio" value="answer1" name="question${index}">
+                    <label for="answer5" class="trivia-answer">${trivia.answer1}</label>
+                </div>
+                <div class="trivia-option">
+                    <input type="radio" value="answer2" name="question${index}">
+                    <label for="answer6" class="trivia-answer">${trivia.answer2}</label>
+                </div>     
+                </section>
+            </div>
+            <div class="submit-button">
+                <button class="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+</body> 
+</html>   
