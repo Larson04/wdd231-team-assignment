@@ -1,7 +1,7 @@
-baseURL = "https://api.thecatapi.com/v1/";
-apiKey = "live_ZsuSFgHn00xI0Vvimbt9yeottf8IFJ6vT0XZKrVNTsufOmbvYPzvOYfkdbhGUzJu";
+const baseURL = "https://api.thecatapi.com/v1/";
+const apiKey = "live_ZsuSFgHn00xI0Vvimbt9yeottf8IFJ6vT0XZKrVNTsufOmbvYPzvOYfkdbhGUzJu";
 
-async function getJson(url) {
+export async function getJson(url) {
     const options = {
       method: "GET",
       headers: {
@@ -17,4 +17,3 @@ async function getJson(url) {
     return data;
   }
 
-getJson("breeds")
