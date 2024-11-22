@@ -122,3 +122,17 @@ header h1 {
 }
 
 /* quiz page */
+
+
+@media screen and (max-width: 800px) {
+    .breeds {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .breeds {
+        display: flex;
+        flex-direction: column;
+    }
+}
