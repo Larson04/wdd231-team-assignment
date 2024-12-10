@@ -1,9 +1,9 @@
-import { getJson } from "./dog.mjs";
+import { getDogJson } from "./dog.mjs";
 
 let allDogData = [];
 
 async function fetchDogData() {
-    const dogData = await getJson("breeds");
+    const dogData = await getDogJson("breeds");
     allDogData = dogData;
     renderBreeds(dogData);
 }

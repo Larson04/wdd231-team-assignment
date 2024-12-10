@@ -1,9 +1,9 @@
-import { getJson } from "./cat.mjs";
+import { getCatJson } from "./cat.mjs";
 
 let allCatData = [];
 
 async function fetchCatData() {
-    const catData = await getJson("breeds");
+    const catData = await getCatJson("breeds");
     allCatData = catData;
     renderBreeds(catData);
 }

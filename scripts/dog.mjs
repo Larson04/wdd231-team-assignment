@@ -1,7 +1,7 @@
 const baseURL = "https://api.thedogapi.com/v1/";
 const apiKey = "live_N0KX4HDQfvOZye7XUtK79dhez98YS7mPyJxC3vGRQLH56NBFovhNx8qbvx9Lcuab";
 
-export async function getJson(url) {
+export async function getDogJson(url) {
     const options = {
       method: "GET",
       headers: {

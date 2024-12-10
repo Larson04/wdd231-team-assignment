@@ -1,7 +1,7 @@
 const baseURL = "https://api.thecatapi.com/v1/";
 const apiKey = "live_ZsuSFgHn00xI0Vvimbt9yeottf8IFJ6vT0XZKrVNTsufOmbvYPzvOYfkdbhGUzJu";
 
-export async function getJson(url) {
+export async function getCatJson(url) {
     const options = {
       method: "GET",
       headers: {
