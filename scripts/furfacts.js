@@ -7,24 +7,45 @@ async function fetchCatData() {
     
 }
 
-async function fetchDogData() {
+
+let allDogData = [];
+
+async function getDogData() {
     const dogData = await getDogJson("breeds");
-    console.log(dogData);
+    allDogData = dogData;
+    renderBreeds(dogData);
 }
 
-function dogDayTemplate(dog) {
+function renderBreeds(data) {
+    const container = document.querySelector(".dotd-card");
+    // container.innerHTML = "";
+    let random = Math.floor(Math.random() * data.length);
+    console.log(random);
+    console.log(data[random].image.url);
+
+    // if (!data[random].image || !data[random].image.url) {
+    //     return; 
+    // }
+    const breedHTML = dogBreedTemplate(data[random]);
+    container.innerHTML += breedHTML;
+
+ }
+
+function dogBreedTemplate(data) {
     return `
-    <section class="aotd-card">
-        <h2>Dog of the Day</h2>
-        <img src="${dog.image.url}" alt="Placeholder Image">
-        <p>${dog.name}</p>
-    </section>
+    <div class="breed">
+    <img src="${data.image.url}" alt="Picture of ${data.name} dog">
+    <p>${data.name}</p>
     `;
 }
 
-function innit() {
-    fetchCatData();
-    fetchDogData();
-}
 
-innit();
+getDogData();
+
+// document.querySelector("#search").addEventListener("click", searchHandler);
+// document.querySelector("#input").addEventListener('keydown', function(e) {
+//     if (e.key === 'Enter') {
+//         e.preventDefault();
+//         searchHandler(e);
+//     }
+// });
