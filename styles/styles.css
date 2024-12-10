@@ -95,6 +95,21 @@ header h1 a {
     width: 35px;
     height: 35px;
 }
+.quiz {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.quiz a{
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: var(--header-font);
+    font-size: 30px;
+}
 .breeds {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -120,6 +135,22 @@ header h1 a {
 }
 .breed-info p {
     font-family: var(--body-font);
+}
+footer {
+    display: flex;
+    justify-content: center;
+}
+footer a {
+    padding: 10px 15px;
+    margin: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000; 
+    font-family: var(--header-font);
+    font-size: 30px;
 }
 
 /* quiz page */
