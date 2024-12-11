@@ -1,51 +1,113 @@
 import {getCatJson} from "./cat.mjs";
 import {getDogJson} from "./dog.mjs";
+import {dogDayTemplate, catDayTemplate, dogBreedTemplate, catBreedTemplate} from "./templates.mjs";
 
-async function fetchCatData() {
-    const catData = await getCatJson("breeds");
-    console.log(catData);
-    
-}
-
-
-let allDogData = [];
 
 async function getDogData() {
     const dogData = await getDogJson("breeds");
-    allDogData = dogData;
-    renderBreeds(dogData);
+    renderDogDayCard(dogData);
+    renderDogBreeds(dogData);
 }
 
-function renderBreeds(data) {
+function renderDogDayCard(data) {
     const container = document.querySelector(".dotd-card");
-    // container.innerHTML = "";
+    container.innerHTML = "";
     let random = Math.floor(Math.random() * data.length);
     console.log(random);
     console.log(data[random].image.url);
 
-    // if (!data[random].image || !data[random].image.url) {
-    //     return; 
-    // }
-    const breedHTML = dogBreedTemplate(data[random]);
+    const breedHTML = dogDayTemplate(data[random]);
+    container.innerHTML += breedHTML;
+
+}
+
+function renderDogBreeds(data) {
+    const container = document.querySelector(".gallery");
+
+    const alaskanHusky = data[7];
+    console.log(alaskanHusky);
+    const alaskanHuskyHTML = dogBreedTemplate(alaskanHusky);
+    container.innerHTML += alaskanHuskyHTML;
+
+    const pitBull = data[14];
+    console.log(pitBull);
+    const pitBullHTML = dogBreedTemplate(pitBull);
+    container.innerHTML += pitBullHTML;
+
+    const germanShepherd = data[82];
+    console.log(germanShepherd);
+    const germanShepherdHTML = dogBreedTemplate(germanShepherd);
+    container.innerHTML += germanShepherdHTML;
+
+    const goldenRetriever = data[86];
+    console.log(goldenRetriever);
+    const goldenRetrieverHTML = dogBreedTemplate(goldenRetriever);
+    container.innerHTML += goldenRetrieverHTML;
+
+    const pug = data[128];
+    console.log(pug);
+    const pugHTML = dogBreedTemplate(pug);
+    container.innerHTML += pugHTML;
+}
+
+
+async function getCatData() {
+    const catData = await getCatJson("breeds");
+    renderCatBreeds(catData);
+    renderCatDayCard(catData);
+}
+
+function renderCatDayCard(data) {
+    const container = document.querySelector(".cotd-card");
+    container.innerHTML = "";
+    let random = Math.floor(Math.random() * data.length);
+    console.log(random);
+    console.log(data[random].image.url);
+    const breedHTML = catDayTemplate(data[random]);
     container.innerHTML += breedHTML;
 
  }
 
-function dogBreedTemplate(data) {
-    return `
-    <div class="breed">
-    <img src="${data.image.url}" alt="Picture of ${data.name} dog">
-    <p>${data.name}</p>
-    `;
+
+
+function renderCatBreeds(data) {
+    const container = document.querySelector(".gallery");
+    container.innerHTML = "";
+
+    const cheetoh = data[21];
+    console.log(cheetoh);
+    const cheetohHTML = catBreedTemplate(cheetoh);
+    container.innerHTML += cheetohHTML;
+
+    const himalayan = data[33];
+    console.log(himalayan);
+    const himalayanHTML = catBreedTemplate(himalayan);
+    container.innerHTML += himalayanHTML;
+
+    const maineCoon = data[40];
+    console.log(maineCoon);
+    const maineCoonHTML = catBreedTemplate(maineCoon);
+    container.innerHTML += maineCoonHTML;
+
+    const siamese = data[56];
+    console.log(siamese);
+    const siameseHTML = catBreedTemplate(siamese);
+    container.innerHTML += siameseHTML;
+
+    const sphynx = data[61];
+    console.log(sphynx);
+    const sphynxHTML = catBreedTemplate(sphynx);
+    container.innerHTML += sphynxHTML;
+
 }
 
 
-getDogData();
 
-// document.querySelector("#search").addEventListener("click", searchHandler);
-// document.querySelector("#input").addEventListener('keydown', function(e) {
-//     if (e.key === 'Enter') {
-//         e.preventDefault();
-//         searchHandler(e);
-//     }
-// });
+
+
+function innit() {
+    getDogData();
+    getCatData();
+}
+
+innit();
