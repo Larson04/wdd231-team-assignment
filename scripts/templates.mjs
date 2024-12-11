@@ -17,7 +17,7 @@ export function dogDayTemplate(data) {
 export function dogBreedTemplate(data) {
     const bredFor = data.bred_for || "unknown";
     return `
-    <div class="breed">
+    <div class="gallery">
     <img src="${data.image.url}" alt="Picture of ${data.name} dog">
     <section class="breed-info">
         <h2>${data.name}</h2>
@@ -33,7 +33,7 @@ export function dogBreedTemplate(data) {
 
 export function catBreedTemplate(data) {
     return `
-    <div class="breed">
+    <div class="gallery">
     <img src="${data.image.url}" alt="Picture of ${data.name} cat">
     <section class="breed-info">
         <h2>${data.name}</h2>
