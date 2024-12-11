@@ -154,6 +154,28 @@ footer a {
 }
 
 /* quiz page */
+.menu {
+    display: flex;
+    justify-content: center;
+}
+.menu label {
+    font-family: var(--header-font);
+    color: var(--primary-color);
+    font-size: 30px;
+    margin-right: 20px;
+}
+#dog-or-cat {
+    font: var(--body-font);
+    color: white;
+    background-color: var(--primary-color);
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+}
+#dog-or-cat:focus {
+    outline: none;
+}
 
 
 @media screen and (max-width: 800px) {
