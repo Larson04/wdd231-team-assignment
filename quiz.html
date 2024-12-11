@@ -9,14 +9,19 @@
 <body>
     <header>
         <a href="index.html">Fur Facts</a>
-        <h1>Quiz</h1>
-        <nav>
-            <a href="dog.html">Dog Breeds</a>
-            <a href="cat.html">Cat Breeds</a>
-            <a href="quiz.html">Quiz</a>
-        </nav>
-    </header>
+        <a href="dog.html">Dog Breeds</a>
+        <a href="cat.html">Cat Breeds</a>  
+        <h1><a href="quiz.html">Quiz</a></h1> 
+    </header>   
     <main>
+        <div class="menu">
+            <label for="dog-or-cat">Select a quiz:</label>
+            <select name="dog-or-cat" id="dog-or-cat">
+                <option value="cat">Cat</option>
+                <option value="dog">Dog</option>
+            </select>
+        </div>
+
         <form>
             <div class="trivia-questions">
                 <h1 class="movie-title-trivia">Question 1</h1>
@@ -52,6 +57,7 @@
                 <button class="submit" type="submit">Submit</button>
             </div>
         </form>
+        <!-- results -->
     </main>
 </body> 
 </html>   
