@@ -5,6 +5,7 @@ import {dogDayTemplate, catDayTemplate, dogBreedTemplate, catBreedTemplate} from
 
 async function getDogData() {
     const dogData = await getDogJson("breeds");
+    console.log(dogData);
     renderDogDayCard(dogData);
     renderDogBreeds(dogData);
 }
@@ -29,25 +30,27 @@ function renderDogBreeds(data) {
     const alaskanHuskyHTML = dogBreedTemplate(alaskanHusky);
     container.innerHTML += alaskanHuskyHTML;
 
-    const pitBull = data[14];
-    console.log(pitBull);
-    const pitBullHTML = dogBreedTemplate(pitBull);
-    container.innerHTML += pitBullHTML;
-
+    
     const germanShepherd = data[82];
     console.log(germanShepherd);
     const germanShepherdHTML = dogBreedTemplate(germanShepherd);
     container.innerHTML += germanShepherdHTML;
-
+    
     const goldenRetriever = data[86];
     console.log(goldenRetriever);
     const goldenRetrieverHTML = dogBreedTemplate(goldenRetriever);
     container.innerHTML += goldenRetrieverHTML;
-
+    
+    const pomeranian = data[125];
+    console.log(pomeranian);
+    const pomeranianHTML = dogBreedTemplate(pomeranian);
+    container.innerHTML += pomeranianHTML;
+    
     const pug = data[128];
     console.log(pug);
     const pugHTML = dogBreedTemplate(pug);
     container.innerHTML += pugHTML;
+    
 }
 
 
