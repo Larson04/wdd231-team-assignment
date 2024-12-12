@@ -5,7 +5,7 @@
     --header-font: "Playfair Display", serif;
     --body-font: "Montserrat", serif;
 
-    --primary-color: rgb(43, 147, 181) ;
+    --primary-color: rgb(157, 225, 248) ;
     --secondary-color: rgb(237, 236, 236);
     --accent-color: rgb(74, 146, 74) ;
 }
@@ -19,6 +19,10 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 200px;
+    background-color: var(--primary-color)
+}
+header img{
+    max-width: 150px;
 }
 header a {
     margin: 10px;
@@ -37,16 +41,18 @@ header h1 a {
 .aotd {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
-.aotd img {
-    width: 500px;
+.dotd-card img, .cotd-card img {
+    max-width: 100%;
     height: 500px;
     object-fit: cover;
 }
-.aotd-card {
+.dotd-card, .cotd-card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 1000%;
 }
 .purpose {
     display: flex;
@@ -64,12 +70,18 @@ header h1 a {
 }
 .gallery {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
-.gallery-card img {
+.gallery-card {
     height: 300px;
-    width: 300px;
+    max-width: 20%;
     object-fit: cover;
+}
+
+.gallery{
+    max-width: 20%;
 }
 
 /* Dog and cat breeds pages */
