@@ -11,7 +11,7 @@
         <a href="index.html">Fur Facts</a>
         <a href="dog.html">Dog Breeds</a>
         <a href="cat.html">Cat Breeds</a>  
-        <h1><a href="quiz.html">Quiz</a></h1> 
+        <h1><a href="quiz.html?quizType=dog">Quiz</a></h1> 
     </header>   
     <main>
         <div class="menu">
@@ -23,35 +23,8 @@
         </div>
 
         <form>
-            <div class="trivia-questions">
-                <h1 class="movie-title-trivia">Question 1</h1>
-                <p class="trivia-question"></p>
-                <section class="answers">
-                <div class="trivia-option">            
-                    <input type="radio" value="answer1" name="question${index}">
-                    <label for="answer1" class="trivia-answer">${trivia.answer1}</label>
-                </div>
-                <div class="trivia-option">
-                    <input type="radio" value="answer2" name="question${index}">
-                    <label for="answer2" class="trivia-answer">${trivia.answer2}</label>
-                </div>
-                <div class="trivia-option">
-                    <input type="radio" value="answer3" name="question${index}">
-                    <label for="answer3" class="trivia-answer">${trivia.answer3}</label>
-                </div>
-                <div class="trivia-option">
-                    <input type="radio" value="answer4" name="question${index}">
-                    <label for="answer4" class="trivia-answer">${trivia.answer4}</label>
-                </div>      
-                <div class="trivia-option">            
-                    <input type="radio" value="answer1" name="question${index}">
-                    <label for="answer5" class="trivia-answer">${trivia.answer1}</label>
-                </div>
-                <div class="trivia-option">
-                    <input type="radio" value="answer2" name="question${index}">
-                    <label for="answer6" class="trivia-answer">${trivia.answer2}</label>
-                </div>     
-                </section>
+            <div class="quiz-container">
+                
             </div>
             <div class="submit-button">
                 <button class="submit" type="submit">Submit</button>
@@ -59,5 +32,6 @@
         </form>
         <!-- results -->
     </main>
+    <script type="module" src="scripts/quiz.js"></script>
 </body> 
 </html>   

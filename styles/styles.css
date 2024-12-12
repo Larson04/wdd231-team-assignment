@@ -176,6 +176,48 @@ footer a {
 #dog-or-cat:focus {
     outline: none;
 }
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.quizQuestion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.quizOptions {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    color: var(--accent-color);
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 20px;
+}
+.quizOption input[type="radio"] {
+    accent-color: var(--accent-color);
+}
+.quizQuestion img {
+    width: 400px;
+    height: 100%;
+    object-fit: contain;
+    margin-right: 50px;
+}
+.submit {
+    display: flex;
+    justify-self: center;
+    margin: 50px;
+    padding: 20px 20px;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--header-font);
+    font-size: 25px;
+}
 
 
 @media screen and (max-width: 800px) {
