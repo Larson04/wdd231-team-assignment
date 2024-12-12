@@ -5,9 +5,9 @@
     --header-font: "Playfair Display", serif;
     --body-font: "Montserrat", serif;
 
-    --primary-color: rgb(157, 225, 248) ;
+    --primary-color: #2072AF ;
     --secondary-color: rgb(237, 236, 236);
-    --accent-color: rgb(74, 146, 74) ;
+    --accent-color: #4F7942;
 }
 
 /* entire website elements */
@@ -19,21 +19,42 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 200px;
-    background-color: var(--primary-color)
+    background-color: var(--accent-color);
+    margin-bottom: 30px;
 }
 header img{
     max-width: 150px;
+}
+header img:hover {
+    animation: tilt 2s infinite; 
+}
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-45deg); 
+    }
+    50% {
+        transform: rotate(0deg); 
+    }
+    75% {
+        transform: rotate(45deg); 
+    }
+    100% {
+        transform: rotate(0deg); 
+    }
 }
 header a {
     margin: 10px;
     font-size: 20px;
     text-decoration: none;
     font-family: var(--body-font);
-    color: var(--accent-color);
+    color: white;
 }
 header h1 a {
     font-family: var(--header-font);
-    color: var(--accent-color);
+    color: var(white);
     font-size: 2.5rem;
 }
 
@@ -59,29 +80,52 @@ header h1 a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10%;
+    margin: 30px 15%;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
 }
 .purpose h3 {
     font-size: 40px;
+    font-family: var(--header-font);
+    color: var(--accent-color);
+    margin: 0;
 }
 .purpose p {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
+    font-family: var(--body-font);
+    margin: 50px;
 }
 .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .gallery-card {
-    height: 300px;
-    max-width: 20%;
-    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
 }
-
-.gallery{
-    max-width: 20%;
+.gallery-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.gallery-card h2 {
+    text-align: center;
+    font-family: var(--header-font);
+    color: var(--accent-color)
+}
+.featured{
+    font-size: 40px;
+    font-family: var(--header-font);
+    color: var(--accent-color);
+    text-align: center;
+    margin-top: 50px;
 }
 
 /* Dog and cat breeds pages */
@@ -169,11 +213,12 @@ footer a {
 .menu {
     display: flex;
     justify-content: center;
+    margin: 40px;
 }
 .menu label {
     font-family: var(--header-font);
     color: var(--primary-color);
-    font-size: 30px;
+    font-size: 40px;
     margin-right: 20px;
 }
 #dog-or-cat {
@@ -188,22 +233,41 @@ footer a {
 #dog-or-cat:focus {
     outline: none;
 }
+.score-container {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    margin: 0px 500px;
+    border-radius: 10px;
+}
+.score-container h2 {
+    font-family: var(--header-font);
+    color: var(--accent-color);
+    font-size: 40px; 
+    margin-top: 0;
+}
+.score-container p {
+    font-family: var(--body-font);
+}
 .quiz-container {
     display: flex;
     flex-direction: column;
-    margin: 30px;
+    margin: 30px 200px;
+    padding: 30px;
 }
 .quizQuestion {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
+    margin: 20px 30px;
+    background-color: var(--secondary-color);
+    padding: 30px 60px;
+    border-radius: 10px;
 }
 .quizOptions {
     display: flex;
     flex-direction: column;
-    width: 20%;
     color: var(--accent-color);
     font-family: var(--body-font);
     font-weight: 400;
@@ -233,14 +297,28 @@ footer a {
 
 
 @media screen and (max-width: 800px) {
+    /* breed pages */
     .breeds {
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* quiz page */
+    .score-container {
+        margin: 100px;
+    }
+    .quizQuestion {
+        margin: 0;
+        padding: 20px;
     }
 }
 
 @media screen and (max-width: 600px) {
+    /* breed pages */
     .breeds {
         display: flex;
         flex-direction: column;
     }
+    /* quiz page */
+    /* .score-container {
+        
+    } */
 }

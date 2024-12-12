@@ -13,7 +13,6 @@ export async function getCatJson(url) {
     if (response.ok) {
       data = await response.json();
     } else throw new Error("response not ok");
-    console.log(data)
     return data;
   }
 

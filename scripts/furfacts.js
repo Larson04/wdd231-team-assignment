@@ -65,10 +65,7 @@ function renderCatDayCard(data) {
     console.log(data[random].image.url);
     const breedHTML = catDayTemplate(data[random]);
     container.innerHTML += breedHTML;
-
- }
-
-
+}
 
 function renderCatBreeds(data) {
     const container = document.querySelector(".gallery");
@@ -100,10 +97,6 @@ function renderCatBreeds(data) {
     container.innerHTML += sphynxHTML;
 
 }
-
-
-
-
 
 function innit() {
     getDogData();
